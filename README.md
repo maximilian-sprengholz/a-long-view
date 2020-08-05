@@ -41,7 +41,7 @@ All other data used is part of this repository.
 
 ## Software
 
-This project was implemented in [Stata 15.1](https://www.stata.com/), but should run in older versions, too. You finde the master file under `src/mz_o_00_master.do`.
+This project was implemented in [Stata 15.1](https://www.stata.com/), but should run in older versions, too. You find the master file under `src/mz_o_00_master.do`.
 
 The following user-written programs need to be installed in order to run the full code (see installation instructions in the linked documentations):
 
