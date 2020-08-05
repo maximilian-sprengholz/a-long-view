@@ -1,0 +1,12 @@
+<div class="tabledetails">
+
+|     |
+| --- |
+: @ {#tbl:@}
+
+<details>
+<summary>
+Expand
+</summary>
+<div class="tabwrap">
+<table class="@">
