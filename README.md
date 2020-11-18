@@ -5,6 +5,7 @@ _Version 1.1.0_
 Open materials for the paper "From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany" by
 [Maximilian Sprengholz](mailto:maximilian.sprengholz@hu-berlin.de), [Claudia Diehl](mailto:claudia.diehl@uni-konstanz.de), [Johannes Giesecke](johannes.giesecke@hu-berlin.de) and [Michaela Kreyenfeld](Kreyenfeld@hertie-school.org).
 
+See [online appendix](https://pages.cms.hu-berlin.de/sprenmax/a-long-view).
 
 ## Project organization
 
@@ -49,7 +50,7 @@ Further external code used:
 - [isei_mz_96-04.do](https://www.gesis.org/missy/files/documents/MZ/isei/isei_mz_96-04.do). Kogan, I. and Schimpl-Neimanns, B. (2006) Recodierung von ISEI auf Basis von ISCO-88 (COM). German Microdata Lab (GML), Mannheim
 - [Programme zur Umsetzung der Bildungsklassifikation ISCED-1997](https://www.gesis.org/missy/materials/MZ/tools/isced), German Microdata Lab (GML), Mannheim. Used for years 1976-2013, source files under `bin/external`.
 
-The online appendix/documentation was created in [Atom](https://github.com/atom/atom) with [Markdown Preview Enhanced](https://github.com/shd101wyy/markdown-preview-enhanced), [Pandoc](https://github.com/jgm/pandoc) and [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref).
+The online [appendix/documentation](https://pages.cms.hu-berlin.de/sprenmax/a-long-view) was created in [Atom](https://github.com/atom/atom) with [Markdown Preview Enhanced](https://github.com/shd101wyy/markdown-preview-enhanced), [Pandoc](https://github.com/jgm/pandoc) and [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref).
 
 
 ## License
