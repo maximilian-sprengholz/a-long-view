@@ -31,7 +31,8 @@ global dir_mz "C:/Users/sprenmax/Desktop/MZ/Daten/" // Microcensus data
 global dir_mzproc "C:/Users/sprenmax/Desktop/MZ/newdata/Max/" // Microcensus data processed
 
 // Run code
-do "${dir_src}mz_o_01_kldb.do" // prep kldb -> isco translation
-do "${dir_src}mz_o_02_gen.do" // generate pooled and harmonized analysis dataset
+//do "${dir_src}mz_o_01_kldb.do" // prep kldb -> isco translation
+//do "${dir_src}mz_o_02_gen.do" // generate pooled and harmonized analysis dataset
 do "${dir_src}mz_o_03_analysis.do" // analysis
+do "${dir_src}mz_o_04_analysis_incl_east.do" // analysis
 do "${dir_src}mz_o_04_emr_inflows.do" // visualization of register data on foreigner inflows

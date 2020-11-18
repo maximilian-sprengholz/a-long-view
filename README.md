@@ -1,8 +1,8 @@
 # a-long-view
 
-_Version 0.1.0_
+_Version 1.1.0_
 
-Open materials for the paper "Immigration and Labor Market Integration in Germany: A Long View" by
+Open materials for the paper "From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany" by
 [Maximilian Sprengholz](mailto:maximilian.sprengholz@hu-berlin.de), [Claudia Diehl](mailto:claudia.diehl@uni-konstanz.de), [Johannes Giesecke](johannes.giesecke@hu-berlin.de) and [Michaela Kreyenfeld](Kreyenfeld@hertie-school.org).
 
 
@@ -11,24 +11,20 @@ Open materials for the paper "Immigration and Labor Market Integration in German
 ```
 .
 ├── .gitignore
-├── CITATION.md
 ├── LICENSE.md
 ├── README.md
-├── requirements.txt
-├── bin                <- Compiled and external code, ignored by git (PG)
-│   └── external       <- Any external source code, ignored by git (RO)
-├── config             <- Configuration files (HW)
-├── data               <- All project data, ignored by git
-│   ├── processed      <- The final, canonical data sets for modeling. (PG)
-│   ├── raw            <- The original, immutable data dump. (RO)
-│   └── temp           <- Intermediate data that has been transformed. (PG)
-├── docs               <- Documentation notebook for users (HW)
-│   ├── manuscript     <- Manuscript source, e.g., LaTeX, Markdown, etc. (HW)
-│   └── reports        <- Other project reports and notebooks (e.g. Jupyter, .Rmd) (HW)
+├── bin                <- Compiled and external code
+│   └── external       <- Any external source code
+├── data               <- All project data
+│   ├── processed      <- The final data set
+│   ├── raw            <- The original, immutable data dump
+│   └── temp           <- Intermediate data that has been transformed
+├── docs               <- Documentation
+├── public             <- Published appendix (as page for repo)
 ├── results
-│   ├── figures        <- Figures for the manuscript or reports (PG)
-│   └── output         <- Other output for the manuscript or reports (PG)
-└── src                <- Source code for this project (HW)
+│   ├── figures        <- Figures for the manuscript / appendix
+│   └── output         <- Other output for the manuscript / appendix
+└── src                <- Source code (.do)
 
 ```
 Repository organization implemented with [cookiecutter](https://github.com/cookiecutter/cookiecutter) using the [good-enough-project template](good-enough-project).
@@ -60,6 +56,9 @@ The online appendix/documentation was created in [Atom](https://github.com/atom/
 
 This project is licensed under the terms of the [MIT License](/LICENSE.md)
 
+
 ## Citation
 
-Please [cite this project as described here](/CITATION.md).
+Please cite this software as:
+
+Sprengholz, M., Diehl, C., Giesecke, J., Kreyenfeld, M. (2020) 'Open materials: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany', [https://scm.cms.hu-berlin.de/sprenmax/a-long-view](https://scm.cms.hu-berlin.de/sprenmax/a-long-view).
