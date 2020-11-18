@@ -1,4 +1,4 @@
-# a-long-view
+# Open materials: 'From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
 
 _Version 1.1.0_
 
