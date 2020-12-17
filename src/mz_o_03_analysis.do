@@ -710,7 +710,7 @@ preserve
 			(line n`var' year if arrcoh==3 & sex==`s') ///
 			(line n`var' year if arrcoh==4 & sex==`s') ///
 			(line n`var' year if arrcoh==5 & sex==`s')
-		graph ${gsavemode} "${dir_g}sum_cohortsize_period_`fname`s''.svg", replace
+		graph ${gsavemode} "${dir_g}sum_cohortsize_period_`fname`s''${gsfx}", replace
 	}
 restore
 
@@ -764,7 +764,7 @@ preserve
 			(line n`var' timeres if arrcoh==3 & sex==`s') ///
 			(line n`var' timeres if arrcoh==4 & sex==`s') ///
 			(line n`var' timeres if arrcoh==5 & sex==`s')
-		graph ${gsavemode} "${dir_g}sum_cohortsize_timeres_`fname`s''.svg", replace
+		graph ${gsavemode} "${dir_g}sum_cohortsize_timeres_`fname`s''${gsfx}", replace
 	}
 restore
 
