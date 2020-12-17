@@ -1,6 +1,6 @@
 # Open materials: 'From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
 
-_Version 1.1.0_
+_Version 1.2.0_
 
 Open materials for the paper 'From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany' by
 [Maximilian Sprengholz](mailto:maximilian.sprengholz@hu-berlin.de), [Claudia Diehl](mailto:claudia.diehl@uni-konstanz.de), [Johannes Giesecke](johannes.giesecke@hu-berlin.de) and [Michaela Kreyenfeld](Kreyenfeld@hertie-school.org).
@@ -20,7 +20,7 @@ See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).
 │   ├── processed      <- The final data set
 │   ├── raw            <- The original, immutable data dump
 │   └── temp           <- Intermediate data that has been transformed
-├── docs               <- Documentation
+├── docs               <- Documentation (Appendix, Bibliography)
 ├── public             <- Published appendix (as page for repo)
 ├── results
 │   ├── figures        <- Figures for the manuscript / appendix
