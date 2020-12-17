@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and duration of stay: ISEI-88, employed only, Men {#tbl:isei88_res_timeres_m}
+: Means by arrival cohort and duration of stay: ISEI-88 (employed only), Men {#tbl:isei88_res_timeres_m}
 
 <details>
 <summary>

@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: No. of obs.: Employment by arrival cohort and naturalization, Men, 2007-2015 {#tbl:nat_empl_dummy_n_m}
+: No. of obs.: Employment rate (in %) by arrival cohort and naturalization, Men, 2007-2015 {#tbl:nat_empl_dummy_n_m}
 
 <details>
 <summary>

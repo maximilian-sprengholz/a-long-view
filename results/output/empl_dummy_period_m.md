@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and period: Employment, Men {#tbl:empl_dummy_period_m}
+: Means by arrival cohort and period: Employment rate (in %), Men {#tbl:empl_dummy_period_m}
 
 <details>
 <summary>
@@ -29,7 +29,7 @@ Expand
 <tr> <td style='text-align: left'>1999</td> <td style='text-align: right'>89.62</td> <td style='text-align: right'>76.40</td> <td style='text-align: right'>78.43</td> <td style='text-align: right'>76.81</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>80.32</td></tr>
 <tr> <td style='text-align: left'>2000</td> <td style='text-align: right'>90.23</td> <td style='text-align: right'>76.23</td> <td style='text-align: right'>82.44</td> <td style='text-align: right'>81.11</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>82.50</td></tr>
 <tr> <td style='text-align: left'>2001</td> <td style='text-align: right'>89.97</td> <td style='text-align: right'>76.32</td> <td style='text-align: right'>83.00</td> <td style='text-align: right'>81.56</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>82.71</td></tr>
-<tr> <td style='text-align: left'>2002</td> <td style='text-align: right'>88.84</td> <td style='text-align: right'>75.50</td> <td style='text-align: right'>80.60</td> <td style='text-align: right'>79.76</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>81.18</td></tr>
+<tr> <td style='text-align: left'>2002</td> <td style='text-align: right'>88.84</td> <td style='text-align: right'>75.51</td> <td style='text-align: right'>80.60</td> <td style='text-align: right'>79.76</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>81.18</td></tr>
 <tr> <td style='text-align: left'>2003</td> <td style='text-align: right'>87.85</td> <td style='text-align: right'>74.24</td> <td style='text-align: right'>78.86</td> <td style='text-align: right'>77.72</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>79.67</td></tr>
 <tr> <td style='text-align: left'>2004</td> <td style='text-align: right'>86.91</td> <td style='text-align: right'></td> <td style='text-align: right'>75.72</td> <td style='text-align: right'>75.37</td> <td style='text-align: right'>67.29</td> <td style='text-align: right'></td> <td style='text-align: right'>76.32</td></tr>
 <tr> <td style='text-align: left'>2005</td> <td style='text-align: right'>87.13</td> <td style='text-align: right'></td> <td style='text-align: right'>77.11</td> <td style='text-align: right'>75.44</td> <td style='text-align: right'>69.08</td> <td style='text-align: right'></td> <td style='text-align: right'>77.19</td></tr>

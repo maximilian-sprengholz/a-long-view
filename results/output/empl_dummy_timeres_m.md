@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and duration of stay: Employment, Men {#tbl:empl_dummy_timeres_m}
+: Means by arrival cohort and duration of stay: Employment rate (in %), Men {#tbl:empl_dummy_timeres_m}
 
 <details>
 <summary>

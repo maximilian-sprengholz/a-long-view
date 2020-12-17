@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and period: Employment, Women {#tbl:empl_dummy_period_f}
+: Means by arrival cohort and period: Employment rate (in %), Women {#tbl:empl_dummy_period_f}
 
 <details>
 <summary>

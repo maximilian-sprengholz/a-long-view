@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//		Immigration and Labor Market Integration in Germany: A Long View
+//		From "guestworkers" to EU migrants: A gendered view on the labor market
+//      integration of different arrival cohorts in Germany
 //
 //		4 -- Process register data on foreigner inflows
 //
@@ -530,7 +531,7 @@ drop rtotal
         "Übriges Europa" "Other Europe"
         "Übriges Ozeanien" "Other Oceania"
         "Unbekanntes Ausland" "Other"
-        "'
+        "' ;
 #delimit cr
 
 local cvals : word count `ctuples'
@@ -589,7 +590,7 @@ drop if inlist(country, 199, 299, 399, 499, 599)
 local th 5 // select number of main groups
 
 // gen values to be stacked for each cohort
-qui forvalues i=1/5 {
+forvalues i=1/5 {
     preserve
         local lbl : variable label cohort`i'
         // make per 1,000
@@ -638,7 +639,7 @@ qui forvalues i=1/5 {
         }
         // make all positive again (puh!)
         gen femtot_temp = cohort_cum_`nother' if sex==2
-        egen femtot = total(femtot)
+        egen femtot = total(femtot_temp)
         drop femtot_temp
         forvalues n=1/`nother' {
             // replace cohort_cum_`n' = cohort_cum_`n' + femtot if sex==1
@@ -801,7 +802,7 @@ grstyle set margin "0 0 0 0", pt: twoway
 //
 
 append using "${dir_data}temp/foreign_inflows_1952_2015_totals.dta"
-egen i_temp = rowtotal(y i)
+egen i_temp = rowtotal(year i)
 replace i = i_temp
 drop i_temp year
 drop if i<1959
@@ -840,7 +841,6 @@ twoway `plotme' `plotme2' ///
     (rbar total_lo total_hi i if sex==2 & inrange(i,2011,2015), color(gs8) lcolor(gs8) barwidth(0.5) fintensity(80) ///
     `plotopts2' yline(-1000(1000)5000) xline(1963.5 1973.5 1983.5 1993.5 2003.5 2010.5) ///
     xtitle("Year", margin(0 0 0 2)) ytitle("N in 1,000", axis(1) margin(0 1 25 0)) ytitle("N in 1,000", margin(1 0 0 65) justification(left) axis(2)) ///
-    title("Immigrant inflows") subtitle("By arrival cohort, gender and main citizenships (upper panel). By year and gender (lower panel). ", margin(bottom)) ///
     legend(order(22 "Women" 21 "Men") cols(2)))
-graph export "${dir_g}sum_cohortcomp.emf", replace
+graph export "${dir_g}sum_cohortcomp.eps", replace
 graph export "${dir_g}sum_cohortcomp.svg", replace

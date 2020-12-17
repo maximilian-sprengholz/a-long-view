@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: ISEI-88, employed only by arrival cohort and naturalization, Women, 2007-2015 {#tbl:nat_isei88_res_f}
+: ISEI-88 (employed only) by arrival cohort and naturalization, Women, 2007-2015 {#tbl:nat_isei88_res_f}
 
 <details>
 <summary>

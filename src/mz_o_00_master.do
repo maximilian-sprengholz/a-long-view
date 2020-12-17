@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//		Immigration and Labor Market Integration in Germany: A Long View
+//		From "guestworkers" to EU migrants: A gendered view on the labor market
+//      integration of different arrival cohorts in Germany
 //
 //		0 -- Master
 //
@@ -27,8 +28,8 @@ global dir_data "${dir}/data/"
  The following macros point to the directory of the original and processed
  Scientific Use Files (SUFs).
 */
-global dir_mz "C:/Users/sprenmax/Desktop/MZ/Daten/" // Microcensus data
-global dir_mzproc "C:/Users/sprenmax/Desktop/MZ/newdata/Max/" // Microcensus data processed
+global dir_mz "" // Microcensus data
+global dir_mzproc "" // Microcensus data processed
 
 // Run code
 do "${dir_src}mz_o_01_kldb.do" // prep kldb -> isco translation

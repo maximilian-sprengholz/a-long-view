@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and duration of stay: Employment, Men (age 18-54) {#tbl:empl_dummy_timeres_m_18_54}
+: Means by arrival cohort and duration of stay: Employment rate (in %), Men (age 18-54) {#tbl:empl_dummy_timeres_m_18_54}
 
 <details>
 <summary>

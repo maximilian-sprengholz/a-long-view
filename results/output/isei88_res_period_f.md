@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and period: ISEI-88, employed only, Women {#tbl:isei88_res_period_f}
+: Means by arrival cohort and period: ISEI-88 (employed only), Women {#tbl:isei88_res_period_f}
 
 <details>
 <summary>
@@ -40,10 +40,10 @@ Expand
 <tr> <td style='text-align: left'>2010</td> <td style='text-align: right'>45.90</td> <td style='text-align: right'></td> <td style='text-align: right'>37.43</td> <td style='text-align: right'>36.19</td> <td style='text-align: right'>38.95</td> <td style='text-align: right'></td> <td style='text-align: right'>39.62</td></tr>
 <tr> <td style='text-align: left'>2011</td> <td style='text-align: right'>46.11</td> <td style='text-align: right'></td> <td style='text-align: right'>36.00</td> <td style='text-align: right'>34.90</td> <td style='text-align: right'>38.40</td> <td style='text-align: right'>41.96</td> <td style='text-align: right'>39.47</td></tr>
 <tr> <td style='text-align: left'>2012</td> <td style='text-align: right'>46.31</td> <td style='text-align: right'></td> <td style='text-align: right'>34.99</td> <td style='text-align: right'>35.84</td> <td style='text-align: right'>37.96</td> <td style='text-align: right'>42.62</td> <td style='text-align: right'>39.55</td></tr>
-<tr> <td style='text-align: left'>2013</td> <td style='text-align: right'>46.50</td> <td style='text-align: right'></td> <td style='text-align: right'>34.79</td> <td style='text-align: right'>34.91</td> <td style='text-align: right'>37.18</td> <td style='text-align: right'>42.28</td> <td style='text-align: right'>39.13</td></tr>
+<tr> <td style='text-align: left'>2013</td> <td style='text-align: right'>46.50</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>34.91</td> <td style='text-align: right'>37.18</td> <td style='text-align: right'>42.28</td> <td style='text-align: right'>40.22</td></tr>
 <tr> <td style='text-align: left'>2014</td> <td style='text-align: right'>46.71</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>34.86</td> <td style='text-align: right'>37.54</td> <td style='text-align: right'>41.49</td> <td style='text-align: right'>40.15</td></tr>
 <tr> <td style='text-align: left'>2015</td> <td style='text-align: right'>47.04</td> <td style='text-align: right'></td> <td style='text-align: right'></td> <td style='text-align: right'>33.79</td> <td style='text-align: right'>36.18</td> <td style='text-align: right'>40.48</td> <td style='text-align: right'>39.37</td></tr>
-<tr> <td style='text-align: left'>Total</td> <td style='text-align: right'>44.21</td> <td style='text-align: right'>33.67</td> <td style='text-align: right'>36.26</td> <td style='text-align: right'>35.88</td> <td style='text-align: right'>38.09</td> <td style='text-align: right'>41.77</td> <td style='text-align: right'>38.38</td></tr>
+<tr> <td style='text-align: left'>Total</td> <td style='text-align: right'>44.21</td> <td style='text-align: right'>33.67</td> <td style='text-align: right'>36.32</td> <td style='text-align: right'>35.88</td> <td style='text-align: right'>38.09</td> <td style='text-align: right'>41.77</td> <td style='text-align: right'>38.41</td></tr>
 </table>
 </div>
 </details>

@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and duration of stay: Employment, Women {#tbl:empl_dummy_timeres_f}
+: Means by arrival cohort and duration of stay: Employment rate (in %), Women {#tbl:empl_dummy_timeres_f}
 
 <details>
 <summary>

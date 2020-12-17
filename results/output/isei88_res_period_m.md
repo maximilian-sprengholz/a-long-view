@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and period: ISEI-88, employed only, Men {#tbl:isei88_res_period_m}
+: Means by arrival cohort and period: ISEI-88 (employed only), Men {#tbl:isei88_res_period_m}
 
 <details>
 <summary>

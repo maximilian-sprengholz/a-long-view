@@ -1,6 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
-//		Immigration and Labor Market Integration in Germany: A Long View
+//		From "guestworkers" to EU migrants: A gendered view on the labor market
+//      integration of different arrival cohorts in Germany
 //
 //		2 -- Generate Analysis Dataset
 //

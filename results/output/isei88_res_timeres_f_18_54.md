@@ -2,7 +2,7 @@
 
 |     |
 | --- |
-: Means by arrival cohort and duration of stay: ISEI-88, employed only, Women (age 18-54) {#tbl:isei88_res_timeres_f_18_54}
+: Means by arrival cohort and duration of stay: ISEI-88 (employed only), Women (age 18-54) {#tbl:isei88_res_timeres_f_18_54}
 
 <details>
 <summary>
