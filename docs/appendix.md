@@ -3,13 +3,7 @@ title:
   'Online Appendix: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
 subtitle:
   'Version <b>1.2.0</b> (2020-12-17)<hr>'
-export_on_save:
-  html: true
-print_background: true
-
-bibliography:
-  "FEM.bib"
-
+date:
 titleDelim: .
 figureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
 subfigureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
@@ -53,7 +47,7 @@ We provide descriptive statistics (means) for the following __labor market outco
 
 
 | Variable       | Definition                                                                                                                                                                            |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| -------------- | ------------------------------------------------------------------------------------------------------ |
 | Employment   | Dummy, 1 for individuals who state to be self-employed, working family members, employees and workers in public or private sector, in vocational training; 0 for un- and non-employed |
 | Working hours | Actual weekly working hours of individual<br />Capped at 80h/week (values 80-95h/week are recoded as 80h/week, rest to missing)                                                       |
 | ISEI-88      | ISEI-88 score for occupation of individual in employment                                                                                                                              |
@@ -70,7 +64,7 @@ We provide descriptive statistics (means) for the following __labor market outco
 | Citizenship        | Foreign (age at immigration otherwise not available)              |
 | Years of residence | Capped at 30y.                                                    |
 | Age at immigration | 18+                                                               |
-| Sample Region      | West Germany                                                      |
+| Sample Region      | West Germany (including East Berlin beginning in 1991)                                                     |
 | Employed           | DV Employment: Yes/No<br />DV Working hours: Yes<br />DV ISEI-88: Yes |
 : Sample restrictions. {#tbl:def_sample}
 
@@ -133,11 +127,14 @@ Sample is restricted to western Germany, including Berlin. <br />
 Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242/12211.1976.00.00.3.1.0">10.21242/12211.1976.00.00.3.1.0</a> to <a href="https://doi.org/10.21242/12211.2015.00.00.3.1.0">10.21242/12211.2015.00.00.3.1.0</a>, own calculations.
 </p>
 
+!include ../results/output/sum_cohortsize_period_f.md
 
-@import "../results/output/sum_cohortsize_period_f.md"
-@import "../results/output/sum_cohortsize_period_f_unres.md"
-@import "../results/output/sum_cohortsize_period_m.md"
-@import "../results/output/sum_cohortsize_period_m_unres.md"
+!include ../results/output/sum_cohortsize_period_f_unres.md
+
+!include ../results/output/sum_cohortsize_period_m.md
+
+!include ../results/output/sum_cohortsize_period_m_unres.md
+
 
 <br />
 Why do we see an increase in cohort size for all arrival cohorts from 2004-2006 and for the first cohort from 1976-1985? The reason is non-response on the arrival year variable, which substantially varies over years:
@@ -151,9 +148,12 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 </p>
 </div>
 
-Since 2005, the immigration year question is part of the mandatory questionnaire. The lower non-response rates mean overall higher observation numbers. [@Tbl:sum_cohort_sel_nonres_2004-2006] shows that the relative size of cohorts in percent increased to a similar extent at this cut-off. So, probably no selection on the cohort (selection on other characteristics still possible, of course). The changes for cohorts 1964-73 and 1994-2003 are due the age range of 25-54, shares are even closer across years without this restriction.
+Since 2005, the immigration year question is part of the mandatory questionnaire. The lower non-response rates mean overall higher observation numbers. [@Tbl:sum_cohort_sel_nonres_2004-2006] shows that the relative size of cohorts in percent increased to a similar extent at this cut-off. So, probably no selection on the cohort (selection on other characteristics still possible, of course). The changes for cohorts 1964-73 and 1994-2003 are due the age range of 25-54, shares are even closer across years without this restriction. @
 
-@import "../results/output/sum_cohort_sel_nonres_2004-2006.md"
+test @import
+
+!include ../results/output/sum_cohort_sel_nonres_2004-2006.md
+
 
 
 ### Cohort size by duration of stay
@@ -183,26 +183,40 @@ Sample is restricted to western Germany, including Berlin. <br />
 Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242/12211.1976.00.00.3.1.0">10.21242/12211.1976.00.00.3.1.0</a> to <a href="https://doi.org/10.21242/12211.2015.00.00.3.1.0">10.21242/12211.2015.00.00.3.1.0</a>, own calculations.
 </p>
 
-@import "../results/output/sum_cohortsize_timeres_f.md"
-@import "../results/output/sum_cohortsize_timeres_f_18_54.md"
-@import "../results/output/sum_cohortsize_timeres_f_unres.md"
-@import "../results/output/sum_cohortsize_timeres_m.md"
-@import "../results/output/sum_cohortsize_timeres_m_18_54.md"
-@import "../results/output/sum_cohortsize_timeres_m_unres.md"
+!include ../results/output/sum_cohortsize_timeres_f.md
+
+!include ../results/output/sum_cohortsize_timeres_f_18_54.md
+
+!include ../results/output/sum_cohortsize_timeres_f_unres.md
+
+!include ../results/output/sum_cohortsize_timeres_m.md
+
+!include ../results/output/sum_cohortsize_timeres_m_18_54.md
+
+!include ../results/output/sum_cohortsize_timeres_m_unres.md
+
 
 
 ### Education by duration of stay
 
 Regarding the presumed higher remigration rates for skilled individuals, we observe higher average levels of education for migrants with a shorter duration of stay compared to migrants with a longer duration of stay (see [@Tbl:sum_isced_remig_f; @Tbl:sum_isced_remig_m]). We find the largest differences within the first years of residence. For example, consider migrant women from arrival cohort 1984-1993. Given a duration of stay between 0 and 3 years, 25.4 percent of these women had some sort of tertiary education. Yet, for a duration of stay of 7-9 years, the share of women with tertiary education was only 18.3 percent. We find similar patterns across cohorts and stronger patterns for men than women, matching our results for occupational status (see [@Fig:isei88_res_timeres_f; @Fig:isei88_res_timeres_m]). Only a minor part of these patterns is explained by selectivity in arrival age (see [@Tbl:sum_isced_arrage_f; @Tbl:sum_isced_arrage_m; @Fig:isei88_res_timeres_f_18_54; @Fig:isei88_res_timeres_m_18_54]). Thus, on average, highly educated (labor) migrants seem to stay for rather short durations.
 
-@import "../results/output/sum_isced_arrage_f.md"
-@import "../results/output/sum_isced_remig_f.md"
-@import "../results/output/sum_isced_remig_f_18_54.md"
-@import "../results/output/sum_isced_remig_f_unres.md"
-@import "../results/output/sum_isced_arrage_m.md"
-@import "../results/output/sum_isced_remig_m.md"
-@import "../results/output/sum_isced_remig_m_18_54.md"
-@import "../results/output/sum_isced_remig_m_unres.md"
+!include ../results/output/sum_isced_arrage_f.md
+
+!include ../results/output/sum_isced_remig_f.md
+
+!include ../results/output/sum_isced_remig_f_18_54.md
+
+!include ../results/output/sum_isced_remig_f_unres.md
+
+!include ../results/output/sum_isced_arrage_m.md
+
+!include ../results/output/sum_isced_remig_m.md
+
+!include ../results/output/sum_isced_remig_m_18_54.md
+
+!include ../results/output/sum_isced_remig_m_unres.md
+
 
 ### Education by naturalization status
 
@@ -210,8 +224,10 @@ _Note: Unrestricted in terms of upper age bound._
 
 We find that average educational levels of immigrant women and men are lower for longer durations of stay, but the decrease is much less pronounced than the one over the first years (see [@Tbl:sum_isced_remig_f; @Tbl:sum_isced_remig_m]). A possible explanation of this decline is again selective outmigration, but also selective naturalization might play a larger role, given that long durations of residence are required for migrants to naturalize in Germany (currently: 8 years). As we cannot follow the same individuals over time in the Microcensus, there is no way to assess the magnitude of both possible processes. However, in recent waves of the Microcensus information on naturalization is available. Based on the years 2007-2015, we compared the educational levels of migrants who naturalized and those who did not (without upper age limit, see [@Tbl:nat_isced_f_unres; @Tbl:nat_isced_m_unres]). Especially regarding the earlier cohorts, naturalized migrant women and men seem to be much better educated (naturalization rates being fairly even between genders). Consequently, if more and more skilled migrants naturalize with longer durations of stay, these drop out of our sample, leading to an underestimation of occupational mobility of arrival cohorts.
 
-@import "../results/output/nat_isced_f_unres.md"
-@import "../results/output/nat_isced_m_unres.md"
+!include ../results/output/nat_isced_f_unres.md
+
+!include ../results/output/nat_isced_m_unres.md
+
 
 
 ### Employment indicators by naturalization status
@@ -224,10 +240,14 @@ This comparison is most sensible for all arrival cohorts except the first (sampl
 
 In term of _employment rates_, naturalized immigrants seem to be quite positively selected (also ethnic Germans), women very strongly so. The difference is up to 10 pp. for women of the 1984-1993 cohort. Selectivity also seems a little different across cohorts, albeit this might be largely due to the different durations of stay. Although employment rates change considerably in some cases when including naturalized immigrants, the overall interpretation remains unchanged. Given the restrictions of our analysis, we would generally tend to underestimate the labor market integration of immigrants in terms of employment rates, particulalry regarding women, overestimating gaps to the native population.
 
-@import "../results/output/nat_empl_dummy_f.md"
-@import "../results/output/nat_empl_dummy_n_f.md"
-@import "../results/output/nat_empl_dummy_m.md"
-@import "../results/output/nat_empl_dummy_n_m.md"
+!include ../results/output/nat_empl_dummy_f.md
+
+!include ../results/output/nat_empl_dummy_n_f.md
+
+!include ../results/output/nat_empl_dummy_m.md
+
+!include ../results/output/nat_empl_dummy_n_m.md
+
 
 <div id="fig:nat_empl_dummy">
 ![Women, by period](../results/figures/nat_empl_dummy_period_f.svg){#fig:nat_empl_dummy_period_f}
@@ -248,10 +268,14 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 
 In term of _working hours_, naturalized immigrants also seem to be slightly positive selected, at least women of the cohorts 1974-83, 1984-93 and 1994-03. However, the general interpretation of our results would be unchanged when including naturalized immigrants.
 
-@import "../results/output/nat_ahours_f.md"
-@import "../results/output/nat_ahours_n_f.md"
-@import "../results/output/nat_ahours_m.md"
-@import "../results/output/nat_ahours_n_m.md"
+!include ../results/output/nat_ahours_f.md
+
+!include ../results/output/nat_ahours_n_f.md
+
+!include ../results/output/nat_ahours_m.md
+
+!include ../results/output/nat_ahours_n_m.md
+
 
 <div id="fig:nat_ahours">
 ![Women, by period](../results/figures/nat_ahours_period_f.svg){#fig:nat_ahours_period_f}
@@ -270,10 +294,14 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 
 In terms of _occupational status_, the picture is much more mixed. Naturalized immigrants are strongly positively selected compared to the non-naturalized for cohorts 1974-83 (women and men) and 1984-1993 (women). Cohort 1994-03 seems to be negatively selected. As for the other indicators: Interpretation remains largely unchangend when considering the naturalized. However, the relative labor market outcomes across cohorts change, they all are very similar now (except for the last cohort).
 
-@import "../results/output/nat_isei88_res_f.md"
-@import "../results/output/nat_isei88_res_n_f.md"
-@import "../results/output/nat_isei88_res_m.md"
-@import "../results/output/nat_isei88_res_n_m.md"
+!include ../results/output/nat_isei88_res_f.md
+
+!include ../results/output/nat_isei88_res_n_f.md
+
+!include ../results/output/nat_isei88_res_m.md
+
+!include ../results/output/nat_isei88_res_n_m.md
+
 
 <div id="fig:nat_isei_res">
 ![Women, by period](../results/figures/nat_isei88_res_period_f.svg){#fig:nat_isei88_res_period_f}
@@ -289,9 +317,12 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 
 
 ### Covariate distribution by arrival cohort and gender: Education, age, and arrival age
-@import "../results/output/sum_edu_age_init.md"
-@import "../results/output/sum_arrage_f.md"
-@import "../results/output/sum_arrage_m.md"
+!include ../results/output/sum_edu_age_init.md
+
+!include ../results/output/sum_arrage_f.md
+
+!include ../results/output/sum_arrage_m.md
+
 
 ---
 
@@ -322,16 +353,22 @@ Sample is restricted to western Germany, including Berlin . <br />
 Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242/12211.1976.00.00.3.1.0">10.21242/12211.1976.00.00.3.1.0</a> to <a href="https://doi.org/10.21242/12211.2015.00.00.3.1.0">10.21242/12211.2015.00.00.3.1.0</a>, own calculations.
 </p>
 
-@import "../results/output/empl_dummy_timeres_f.md"
-@import "../results/output/empl_dummy_timeres_m.md"
-@import "../results/output/empl_dummy_period_f.md"
-@import "../results/output/empl_dummy_period_m.md"
+!include ../results/output/empl_dummy_timeres_f.md
+
+!include ../results/output/empl_dummy_timeres_m.md
+
+!include ../results/output/empl_dummy_period_f.md
+
+!include ../results/output/empl_dummy_period_m.md
+
 
 __Additional check for drop in employment rates of men of 1964-1973 cohort beginning in 1991:__
 Particularly affected by unemployment, as shown in the tables below. Many seem to have chosen  early retirement over unemployment.
 
-@import "../results/output/sum_cohort_1_emplst_m.md"
-@import "../results/output/sum_cohort_1_subsis_m.md"
+!include ../results/output/sum_cohort_1_emplst_m.md
+
+!include ../results/output/sum_cohort_1_subsis_m.md
+
 
 ## Working Hours
 
@@ -352,10 +389,14 @@ Sample is restricted to western Germany, including Berlin . <br />
 Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242/12211.1976.00.00.3.1.0">10.21242/12211.1976.00.00.3.1.0</a> to <a href="https://doi.org/10.21242/12211.2015.00.00.3.1.0">10.21242/12211.2015.00.00.3.1.0</a>, own calculations.
 </p>
 
-@import "../results/output/ahours_timeres_f.md"
-@import "../results/output/ahours_timeres_m.md"
-@import "../results/output/ahours_period_f.md"
-@import "../results/output/ahours_period_m.md"
+!include ../results/output/ahours_timeres_f.md
+
+!include ../results/output/ahours_timeres_m.md
+
+!include ../results/output/ahours_period_f.md
+
+!include ../results/output/ahours_period_m.md
+
 
 <div id="fig:emplst">
 ![Women, full-time employment](../results/figures/emplst1_period_f.svg){#fig:emplst1_period_f}
@@ -397,10 +438,14 @@ Sample is restricted to western Germany, including Berlin . <br />
 Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242/12211.1976.00.00.3.1.0">10.21242/12211.1976.00.00.3.1.0</a> to <a href="https://doi.org/10.21242/12211.2015.00.00.3.1.0">10.21242/12211.2015.00.00.3.1.0</a>, own calculations.
 </p>
 
-@import "../results/output/isei88_res_timeres_f.md"
-@import "../results/output/isei88_res_timeres_m.md"
-@import "../results/output/isei88_res_period_f.md"
-@import "../results/output/isei88_res_period_m.md"
+!include ../results/output/isei88_res_timeres_f.md
+
+!include ../results/output/isei88_res_timeres_m.md
+
+!include ../results/output/isei88_res_period_f.md
+
+!include ../results/output/isei88_res_period_m.md
+
 
 __Additional check for age restriction effects:__
 Regarding skill selectivity in arrival age, our sample restriction to persons between age 25 and 54 means that migrants arriving at age 18-23 'grow into' our sample.  For example, a person who immigrated at age 20 is first part of our analysis sample after 5 years of stay in Germany. If those young migrants who grow into our sample are less skilled and take on lower status employment than older arrivals who are already included, this might explain part of the decline in occupational status over the first years of residence. Comparing the educational levels between these two groups for a duration of stay of 1-6 years, this general pattern is indeed what we find for all cohorts but the first (see [@Tbl:sum_isced_arrage_f; @Tbl:sum_isced_arrage_m]). Consequently, accounting for this kind of selectivity in our occupational status analysis (by extending the age range to 18-54) leads to attenuated declines in ISEI scores in the first years of residence, particularly for women:
@@ -441,120 +486,3 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 # References
 
 ---
-
-
-<!--
-
-JS lightbox
-
--->
-
-
-<script>
-
-var Img_Grid_Lightbox = new function() {
-    // check if organized in grids or not
-    let allGrids = document.querySelectorAll('.figure,.subfigures');
-    if (allGrids.length == 0) {
-        // console.log(allGrids.length);
-        allGrids = document.getElementsByTagName('body');
-    }
-    let lightbox = false;
-    let imgIndex = [
-        src = [],
-        cap = []
-    ];
-    // lightbox functionality
-    this.startLightbox = function(element) {
-        // start lightbox and set image source
-        let gridId = Number(element.getAttribute("gridId"));
-        let imgId  = Number(element.getAttribute("imgId"));
-        const imgNo = imgIndex[0][gridId].length;
-        document.getElementById('lightbox-img-scaler').style.backgroundImage = 'url(' + imgIndex[0][gridId][imgId] + ')';
-        document.getElementById('lightbox-legend').innerHTML = '<span>' + (imgId+1) + '/' + imgNo + '</span><span>' + imgIndex[1][gridId][imgId] + '</span>';
-        document.getElementById('lightbox-container').style.display = 'flex';
-        // set click events for navigation
-        document.getElementById('lightbox-prev').addEventListener("click",function(){
-            if (imgId > 0) {
-                imgId--
-            } else {
-                imgId = (imgNo - 1)
-            }
-            document.getElementById('lightbox-img-scaler').style.backgroundImage = 'url(' + imgIndex[0][gridId][imgId] + ')';
-            document.getElementById('lightbox-legend').innerHTML = '<span>' + (imgId+1) + '/' + imgNo + '</span><span>' + imgIndex[1][gridId][imgId] + '</span>';
-        });
-        document.getElementById('lightbox-next').addEventListener("click",function(){
-            if (imgId < (imgNo - 1)) {
-                imgId++
-            } else {
-                imgId = 0
-            }
-            document.getElementById('lightbox-img-scaler').style.backgroundImage = 'url(' + imgIndex[0][gridId][imgId] + ')';
-            document.getElementById('lightbox-legend').innerHTML = '<span>' + (imgId+1) + '/' + imgNo + '</span><span>' + imgIndex[1][gridId][imgId] + '</span>';
-        });
-        // close events per click and ESC
-        document.getElementById('lightbox-close').addEventListener("click",function(){
-            document.getElementById('lightbox-container').style.display = 'none';
-            document.body.removeEventListener("keyup", keyDown);
-        });
-        keyDown = function(){
-            let keyCode = event.which;
-            if (keyCode == 27) {
-                document.getElementById('lightbox-container').style.display = 'none';
-                document.body.removeEventListener("keyup", keyDown);
-            };
-        };
-        document.body.addEventListener("keyup", keyDown);
-    };
-    // initialize
-    this.init = function() {
-        // for all image grids in document
-        for (let i=0; i<allGrids.length; i++) {
-            // console.log('Graph grid: ' + i)
-            // placeholder arrays per grid (sources and caps)
-            let imgSrc = [];
-            let imgCap = [];
-            // index all images within grid
-            const allImg = allGrids[i].querySelectorAll('img');
-            // for all images within a single grid
-            for (let j=0; j<allImg.length; j++) {
-                // console.log('Image within grid: ' + j);
-                // get and push source and figcaption in array
-                imgSrc.push(allImg[j].getAttribute('src'));
-                let cap = allGrids[i].querySelectorAll('img[id="' + allImg[j].getAttribute('id') + '"]' + ' + figcaption')[0];
-                if (cap) {
-                    imgCap.push(cap.innerHTML);
-                } else {
-                    imgCap.push('');
-                }
-                // set attributes that will be fed to lightbox to get sources
-                allImg[j].setAttribute("gridId", i );
-                allImg[j].setAttribute("imgId", j );
-                // add click event listener to open lightbox
-                allImg[j].addEventListener("click", function(){ Img_Grid_Lightbox.startLightbox(allImg[j]); });
-            };
-            // push grid specific arrays in main index
-            imgIndex[0].push(imgSrc);
-            imgIndex[1].push(imgCap);
-        };
-        // append lightbox container once (after pushing all images in Index)
-        let lightboxContainer = '<div id="lightbox-container">\n'
-        lightboxContainer += '<a href="#/" id="lightbox-prev">&#9664;</a>\n'
-        lightboxContainer += '<a href="#/" id="lightbox-next">&#9654;</a>\n'
-        lightboxContainer += '<a href="#/" id="lightbox-close">&times;</a>\n'
-        lightboxContainer += '<div id="lightbox-img-scaler"></div>\n'
-        lightboxContainer += '<p id="lightbox-legend"></p>\n'
-        lightboxContainer += '</div>\n'
-        document.body.insertAdjacentHTML('afterbegin', lightboxContainer)
-    };
-};
-
-// add a way to count the occurence of figure captions so that they have the right label
-// add the same procedure for tables (omit the '::before' logic)
-
-// Init on load
-window.addEventListener("load", function(){
-    Img_Grid_Lightbox.init();
-});
-
-</script>
