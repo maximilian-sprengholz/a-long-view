@@ -1,1 +1,0 @@
-pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css appendix.md -H dep/lightbox.js -s -o test.html
