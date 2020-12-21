@@ -7,10 +7,6 @@
 
 image: kenose/pandoc-python:latest
 
-cache:
-  paths:
-    - .cache/pip
-
 before_script:
   - python -V  # Print out python version for debugging
   - pipenv --where
