@@ -13,7 +13,7 @@ cache:
 
 before_script:
   - python -V  # Print out python version for debugging
-  - pip search pandoc-include
+  - pip3 list
 
 pages:
   script:
