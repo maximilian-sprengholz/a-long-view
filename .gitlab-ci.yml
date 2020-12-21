@@ -14,6 +14,7 @@ cache:
 before_script:
   - python -V  # Print out python version for debugging
   - pip3 list
+  - pip list
 
 pages:
   script:
