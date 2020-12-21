@@ -13,7 +13,7 @@ cache:
 
 before_script:
   - python -V  # Print out python version for debugging
-  - pipenv shell
+  - pipenv --where
 
 pages:
   script:
