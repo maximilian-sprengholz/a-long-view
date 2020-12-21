@@ -1,40 +1,14 @@
-# Based on official GitLab gitlab-ci.yml documentation for Python:
-# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Python.gitlab-ci.yml
+# Pulls image including:
+#   Python 3.72, incl. pip and pipenv
+#   Pandoc 2.11.3
+#   pandoc-crossref 0.3.8.4
+#   pandoc-include 0.8.4
+# Builds html from md file, copies to public
 
-# Official language image. Look for the different tagged releases at:
-# https://hub.docker.com/r/library/python/tags/
-image: scm.cms.hu-berlin.de:4567/sprenmax/pandoc-python-docker:latest
-
-# Change pip's cache directory to be inside the project directory since we can
-# only cache local items.
-variables:
-  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
-
-# Pip's cache doesn't store the python packages
-# https://pip.pypa.io/en/stable/reference/pip_install/#caching
-#
-# If you want to also cache the installed packages, you have to install
-# them in a virtualenv and cache it as well.
-cache:
-  paths:
-    - .cache/pip
-    - venv/
-
-before_script:
-  - python -V  # Print out python version for debugging
-  - pip install virtualenv
-  - virtualenv venv
-  - source venv/bin/activate
-
-test:
-  script:
-    - python setup.py test
-    - pip install tox flake8  # you can also use tox
-    - tox -e py36,flake8
+image: kenose/pandoc-python:latest
 
 pages:
   script:
-    - pip install pandoc-include==0.8.4
     - cd docs
     - pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css appendix.md -H dep/lightbox.js -s -o appendix.html
     - cp appendix.html index.html ../public/
