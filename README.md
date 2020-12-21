@@ -20,7 +20,7 @@ See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).
 │   ├── processed      <- The final data set
 │   ├── raw            <- The original, immutable data dump
 │   └── temp           <- Intermediate data that has been transformed
-├── docs               <- Documentation (Appendix, Bibliography)
+├── docs               <- Documentation (.md, building dependencies)
 ├── public             <- Published appendix (as page for repo)
 ├── results
 │   ├── figures        <- Figures for the manuscript / appendix
