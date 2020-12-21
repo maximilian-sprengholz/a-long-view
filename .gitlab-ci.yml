@@ -13,7 +13,7 @@ cache:
 
 before_script:
   - python -V  # Print out python version for debugging
-  - pip3 install pandoc-include==0.8.4
+  - pipenv -V
 
 pages:
   script:
