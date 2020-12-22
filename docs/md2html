@@ -1,4 +1,2 @@
-python3 dep/regexrep.py 'index.html' 'PEANUTS' 'regex prob?'
-
 # pandoc call
-# pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=appendix.bib --csl=journal-of-family-research.csl --number-sections --table-of-contents -c ../public/css/vue_extended.css appendix.md -s -o test.html
+pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=appendix.bib --csl=journal-of-family-research.csl --number-sections --table-of-contents -c ../public/css/vue_extended.css appendix.md -s -o test.html
