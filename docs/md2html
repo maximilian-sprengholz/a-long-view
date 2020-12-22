@@ -1,0 +1,3 @@
+python dep/relpathfix.py 'appendix.md' '../results/figures' 'figures'
+
+# pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=appendix.bib --csl=journal-of-family-research.csl --number-sections --table-of-contents -c ../public/css/vue_extended.css appendix.md -s -o test.html
