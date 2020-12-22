@@ -45,7 +45,7 @@ pages:
     - ls
     - ls -al docs
     - cd docs
-    - mv index.html public/ # copy index to update
+    - mv index.html ../public/ # copy index to update
   artifacts:
     paths:
       - public
