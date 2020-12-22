@@ -38,13 +38,12 @@ build:
     - master
 
 pages:
+  stage: deploy
   script:
-    - ls
-    - ls -al public
     - cp -R -f results/figures/ public/ # copy figures
   artifacts:
     paths:
       - public
-    expire_in: 5 mins
+    expire_in: 15 mins
   only:
     - master
