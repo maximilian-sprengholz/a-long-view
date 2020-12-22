@@ -13,6 +13,7 @@ image: kenose/pandoc-python:latest
 
 before_script:
   - export DATE=$(date '+%y-%m-%d')
+  - echo ${DATE}
 
 gen_docs:
   stage: build
