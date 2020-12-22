@@ -40,9 +40,12 @@ gen_docs:
 pages:
   stage: deploy
   script:
+    - git pull --rebase http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH} HEAD:${CI_COMMIT_REF_NAME}
+    - git checkout master
     - rm -rf public
     - mkdir public
     - cp -R -f results/figures/ public/ # copy figures
+    - ls -al docs
     - cd docs
     - mv -f index.html public/ # copy index to update
   artifacts:
