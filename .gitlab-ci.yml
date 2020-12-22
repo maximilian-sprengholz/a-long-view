@@ -26,7 +26,6 @@ gen_docs:
     - cp appendix.html index.html
     - python3 dep/regexrep.py 'index.html' '../results/figures' 'figures' # fix links for pages (though usually no problem with base64 encoded .svg)
     - cd ../
-    - git checkout master
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git add docs/appendix.md
@@ -42,9 +41,6 @@ pages:
   stage: deploy
   script:
     - cp -R -f results/figures/ public/ # copy figures
-    - ls
-    - ls -al docs
-    - cd docs
     - mv index.html ../public/ # copy index to update
   artifacts:
     paths:
