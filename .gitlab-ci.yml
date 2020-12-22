@@ -14,7 +14,8 @@ image: kenose/pandoc-python:latest
 before_script:
   - export DATE=$(date '+%y-%m-%d')
 
-build:
+gen_docs:
+  stage: build
   script:
     - cd docs
     - >-
