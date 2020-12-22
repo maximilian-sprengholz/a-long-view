@@ -19,17 +19,16 @@ gen_docs:
   script:
     - cd docs
     - python3 dep/regexrep.py 'appendix.md' '(subtitle:[\s][\S])(\b.*$)' '$1Version <b>${CI_COMMIT_TAG}</b>"'
-    - python3 dep/regexrep.py 'appendix.md' '(date:[\s][\S])(\b.*$)' '$1"${DATE}"'
+    - python3 dep/regexrep.py 'appendix.md' '(date:[\s][\S])(\b.*$)' '$1${DATE}"'
     - pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css appendix.md -H dep/lightbox.js -s -o appendix.html
     - cp appendix.html index.html
     - python3 dep/regexrep.py 'index.html' '../results/figures' 'figures' # fix links for pages (though usually no problem with base64 encoded .svg)
-    - mv index.html ../public/
     - cd ../
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git add docs/appendix.md
     - git add docs/appendix.html
-    - git add public/index.html
+    - git add docs/index.html
     - git commit -m "[ci skip] Built docs ${CI_COMMIT_TAG}" || echo "Nothing to commit."
     - git stash
     - git pull --rebase http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH} HEAD:${CI_COMMIT_REF_NAME}
@@ -44,7 +43,8 @@ pages:
     - rm -rf public
     - mkdir public
     - cp -R -f results/figures/ public/ # copy figures
-    - mv -f public/index.html public/ # copy index to update
+    - cd docs
+    - mv -f index.html public/ # copy index to update
   artifacts:
     paths:
       - public
