@@ -14,7 +14,7 @@ build:
     - cp appendix.html index.html
     - python dep/relpathfix.py 'index.html' '../results/figures' 'figures' # fix links for pages
     - mv index.html ../public/
-    - ls
+    - cd ../
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git add docs/appendix.html
