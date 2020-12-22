@@ -24,8 +24,6 @@ build:
 deploy:
   stage: deploy
   script:
-    - cd docs
-    - ls
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git add docs/appendix.html
@@ -36,11 +34,12 @@ deploy:
     - master
 
 pages:
+  stage: deploy
   script:
-    - mv results/figures ../public/ # copy figures
+    - cp -R -f results/figures/ ../public/ # copy figures
   artifacts:
     paths:
       - public
-    expire_in: 1 week
+    expire_in: 5 mins
   only:
     - master
