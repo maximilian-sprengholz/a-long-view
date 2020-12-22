@@ -5,10 +5,12 @@
 #   pandoc-include 0.8.4
 # Builds html from md file, copies to public
 
-image: kenose/pandoc-python:latest
+stages:
+  - build
+  - commit
+  - deploy
 
-before_script:
-  - python -V  # Print out python version for debugging
+image: kenose/pandoc-python:latest
 
 build:
   stage: build
@@ -18,12 +20,7 @@ build:
     - cp appendix.html index.html
     - python dep/relpathfix.py 'index.html' '../results/figures' 'figures' # fix links for pages
     - mv index.html ../public/
-  only:
-    - master
-
-deploy:
-  stage: deploy
-  script:
+    - ls
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
     - git add docs/appendix.html
@@ -34,7 +31,6 @@ deploy:
     - master
 
 pages:
-  stage: deploy
   script:
     - cp -R -f results/figures/ ../public/ # copy figures
   artifacts:
