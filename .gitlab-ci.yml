@@ -18,8 +18,8 @@ gen_docs:
   stage: build
   script:
     - cd docs
-    - python3 dep/regexrep.py 'appendix.md' '(subtitle:[\s][\S])\b.*$' 'subtitle:[\s]"Version <b>${CI_COMMIT_TAG}</b>"'
-    - python3 dep/regexrep.py 'appendix.md' '(date:[\s][\S])\b.*$' 'date:[\s]"${DATE}"'
+    - python3 dep/regexrep.py 'appendix.md' '(subtitle:[\s][\S])\b.*$' 'subtitle:\s"Version <b>${CI_COMMIT_TAG}</b>"'
+    - python3 dep/regexrep.py 'appendix.md' '(date:[\s][\S])\b.*$' 'date:\s"${DATE}"'
     - pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css appendix.md -H dep/lightbox.js -s -o appendix.html
     - cp appendix.html index.html
     - python3 dep/regexrep.py 'index.html' '../results/figures' 'figures' # fix links for pages (though usually no problem with base64 encoded .svg)
