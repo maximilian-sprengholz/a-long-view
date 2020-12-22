@@ -41,6 +41,7 @@ pages:
   stage: deploy
   script:
     - cp -R -f results/figures/ public/ # copy figures
+    - cd docs
     - mv index.html ../public/ # copy index to update
   artifacts:
     paths:
