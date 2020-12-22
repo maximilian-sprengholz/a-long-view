@@ -5,15 +5,9 @@
 #   pandoc-include 0.8.4
 # Builds html from md file, copies to public
 
-stages:
-  - build
-  - commit
-  - deploy
-
 image: kenose/pandoc-python:latest
 
 build:
-  stage: build
   script:
     - cd docs
     - pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css appendix.md -H dep/lightbox.js -s -o appendix.html
