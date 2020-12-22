@@ -45,9 +45,7 @@ pages:
     - rm -rf public
     - mkdir public
     - cp -R -f results/figures/ public/ # copy figures
-    - ls -al docs
-    - cd docs
-    - mv -f index.html public/ # copy index to update
+    - mv -f index.html ../public/ # copy index to update
   artifacts:
     paths:
       - public
