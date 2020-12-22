@@ -1434,7 +1434,10 @@
       margin: 0;
       padding: 0.7rem 0 0 0;
     }
-    p.subtitle + hr {
+    p.date {
+      margin: 0;
+    }
+    p.date + hr {
       margin-top: 1rem;
     }
     h1,

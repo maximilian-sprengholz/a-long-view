@@ -1,8 +1,8 @@
 ---
 title:
   'Online Appendix: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
-subtitle: 'Version <b>{{TAG}}</b><hr>'
-date: '2020-12-22'
+subtitle: 'Version <b>1.2.0</b>'
+date: '2020-12-17'
 titleDelim: .
 figureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
 subfigureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
@@ -98,7 +98,7 @@ This approach involves the following steps:
 ## Cohort composition
 
 <div class="figure">
-![Immigrant inflows to Germany by year and gender (lower panel). Citizenship composition of arrival cohorts by gender (upper panel).](figures/sum_cohortcomp.svg){#fig:cohortcomp}
+![Immigrant inflows to Germany by year and gender (lower panel). Citizenship composition of arrival cohorts by gender (upper panel).](../results/figures/sum_cohortcomp.svg){#fig:cohortcomp}
 
 <p class="fignote">
 Numbers include inflows to eastern Germany since 1991. Citizenship shares plotted for countries of origin with consistently available information for the full arrival period. For the Soviet Union, the Czech Republic, and Yugoslavia, both aggregated and disaggregated data are provided by the municipalities in some years. In these cases, we distributed the aggregated numbers among the constituting countries corresponding to their respective disaggregated shares.<br />
@@ -111,13 +111,13 @@ Source: German municipality registers [@destatis2020bevoelkerung-1].
 ### Cohort size by period
 
 <div id="fig:sum_cohortsize_period">
-![Women, age 25-54](figures/sum_cohortsize_period_f.svg){#fig:sum_cohortsize_period_f}
+![Women, age 25-54](../results/figures/sum_cohortsize_period_f.svg){#fig:sum_cohortsize_period_f}
 
-![Men, age 25-54](figures/sum_cohortsize_period_m.svg){#fig:sum_cohortsize_period_m}
+![Men, age 25-54](../results/figures/sum_cohortsize_period_m.svg){#fig:sum_cohortsize_period_m}
 
-![Women, age 25+](figures/sum_cohortsize_period_f_unres.svg){#fig:sum_cohortsize_period_f_unres}
+![Women, age 25+](../results/figures/sum_cohortsize_period_f_unres.svg){#fig:sum_cohortsize_period_f_unres}
 
-![Men, age 25+](figures/sum_cohortsize_period_m_unres.svg){#fig:sum_cohortsize_period_m_unres}
+![Men, age 25+](../results/figures/sum_cohortsize_period_m_unres.svg){#fig:sum_cohortsize_period_m_unres}
 
 Cohort size development by period. Different age restrictions.
 </div>
@@ -139,7 +139,7 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 Why do we see an increase in cohort size for all arrival cohorts from 2004-2006 and for the first cohort from 1976-1985? The reason is non-response on the arrival year variable, which substantially varies over years:
 
 <div class="figure">
-![Non-response on arrival year variable by year and gender.](figures/sum_yimmi_nonres.svg){#fig:yimmi_nonres}
+![Non-response on arrival year variable by year and gender.](../results/figures/sum_yimmi_nonres.svg){#fig:yimmi_nonres}
 
 <p class="fignote">
 Corresponds to analysis sample except for arrival year restrictions. Shares for persons with non-German citizenship who were born abroad. <br />
@@ -162,17 +162,17 @@ test @import
 </p>
 
 <div id="fig:sum_cohortsize_timeres">
-![Women, age 25-54](figures/sum_cohortsize_timeres_f.svg){#fig:sum_cohortsize_timeres_f}
+![Women, age 25-54](../results/figures/sum_cohortsize_timeres_f.svg){#fig:sum_cohortsize_timeres_f}
 
-![Men, age 25-54](figures/sum_cohortsize_timeres_m.svg){#fig:sum_cohortsize_timeres_m}
+![Men, age 25-54](../results/figures/sum_cohortsize_timeres_m.svg){#fig:sum_cohortsize_timeres_m}
 
-![Women, age 18-54](figures/sum_cohortsize_timeres_f_18_54.svg){#fig:sum_cohortsize_timeres_f_18_54}
+![Women, age 18-54](../results/figures/sum_cohortsize_timeres_f_18_54.svg){#fig:sum_cohortsize_timeres_f_18_54}
 
-![Men, age 18-54](figures/sum_cohortsize_timeres_m_18_54.svg){#fig:sum_cohortsize_timeres_m_18_54}
+![Men, age 18-54](../results/figures/sum_cohortsize_timeres_m_18_54.svg){#fig:sum_cohortsize_timeres_m_18_54}
 
-![Women, age 25+](figures/sum_cohortsize_timeres_f_unres.svg){#fig:sum_cohortsize_timeres_f_unres}
+![Women, age 25+](../results/figures/sum_cohortsize_timeres_f_unres.svg){#fig:sum_cohortsize_timeres_f_unres}
 
-![Men, age 25+](figures/sum_cohortsize_timeres_m_unres.svg){#fig:sum_cohortsize_timeres_m_unres}
+![Men, age 25+](../results/figures/sum_cohortsize_timeres_m_unres.svg){#fig:sum_cohortsize_timeres_m_unres}
 
 Cohort size development by duration of stay. Different age restrictions.
 
@@ -249,9 +249,9 @@ In term of _employment rates_, naturalized immigrants seem to be quite positivel
 
 
 <div id="fig:nat_empl_dummy">
-![Women, by period](figures/nat_empl_dummy_period_f.svg){#fig:nat_empl_dummy_period_f}
+![Women, by period](../results/figures/nat_empl_dummy_period_f.svg){#fig:nat_empl_dummy_period_f}
 
-![Men, by period](figures/nat_empl_dummy_period_m.svg){#fig:nat_empl_dummy_period_m}
+![Men, by period](../results/figures/nat_empl_dummy_period_m.svg){#fig:nat_empl_dummy_period_m}
 
 Employment rates shown for non-German immigrants (our standard definition, solid lines) and all immigrants including those who naturalized (dashed lines).
 
@@ -277,9 +277,9 @@ In term of _working hours_, naturalized immigrants also seem to be slightly posi
 
 
 <div id="fig:nat_ahours">
-![Women, by period](figures/nat_ahours_period_f.svg){#fig:nat_ahours_period_f}
+![Women, by period](../results/figures/nat_ahours_period_f.svg){#fig:nat_ahours_period_f}
 
-![Men, by period](figures/nat_ahours_period_m.svg){#fig:nat_ahours_period_m}
+![Men, by period](../results/figures/nat_ahours_period_m.svg){#fig:nat_ahours_period_m}
 
 Weekly working hours shown for non-German immigrants (our standard definition, solid lines) and all immigrants including those who naturalized (dashed lines).
 
@@ -303,9 +303,9 @@ In terms of _occupational status_, the picture is much more mixed. Naturalized i
 
 
 <div id="fig:nat_isei_res">
-![Women, by period](figures/nat_isei88_res_period_f.svg){#fig:nat_isei88_res_period_f}
+![Women, by period](../results/figures/nat_isei88_res_period_f.svg){#fig:nat_isei88_res_period_f}
 
-![Men, by period](figures/nat_isei88_res_period_m.svg){#fig:nat_isei88_res_period_m}
+![Men, by period](../results/figures/nat_isei88_res_period_m.svg){#fig:nat_isei88_res_period_m}
 
 Employment rates shown for non-German immigrants (our standard definition, solid lines) and all immigrants including those who naturalized (dashed lines).
 </div>
@@ -336,13 +336,13 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 ## Employment
 
 <div id="fig:empl_dummy">
-![Women, by duration of stay](figures/empl_dummy_timeres_f.svg){#fig:empl_dummy_timeres_f}
+![Women, by duration of stay](../results/figures/empl_dummy_timeres_f.svg){#fig:empl_dummy_timeres_f}
 
-![Men, by duration of stay](figures/empl_dummy_timeres_m.svg){#fig:empl_dummy_timeres_m}
+![Men, by duration of stay](../results/figures/empl_dummy_timeres_m.svg){#fig:empl_dummy_timeres_m}
 
-![Women, by period](figures/empl_dummy_period_f.svg){#fig:empl_dummy_period_f}
+![Women, by period](../results/figures/empl_dummy_period_f.svg){#fig:empl_dummy_period_f}
 
-![Men, by period](figures/empl_dummy_period_m.svg){#fig:empl_dummy_period_m}
+![Men, by period](../results/figures/empl_dummy_period_m.svg){#fig:empl_dummy_period_m}
 
 Employment rates (as share of sample population) by arrival cohort, gender, duration of stay and period.
 
@@ -372,13 +372,13 @@ Particularly affected by unemployment, as shown in the tables below. Many seem t
 ## Working Hours
 
 <div id="fig:ahours">
-![Women, by duration of stay](figures/ahours_timeres_f.svg){#fig:ahours_timeres_f}
+![Women, by duration of stay](../results/figures/ahours_timeres_f.svg){#fig:ahours_timeres_f}
 
-![Men, by duration of stay](figures/ahours_timeres_m.svg){#fig:ahours_timeres_m}
+![Men, by duration of stay](../results/figures/ahours_timeres_m.svg){#fig:ahours_timeres_m}
 
-![Women, by period](figures/ahours_period_f.svg){#fig:ahours_period_f}
+![Women, by period](../results/figures/ahours_period_f.svg){#fig:ahours_period_f}
 
-![Men, by period](figures/ahours_period_m.svg){#fig:ahours_period_m}
+![Men, by period](../results/figures/ahours_period_m.svg){#fig:ahours_period_m}
 
 Weekly working hours by arrival cohort, gender, duration of stay and period.
 
@@ -398,17 +398,17 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 
 
 <div id="fig:emplst">
-![Women, full-time employment](figures/emplst1_period_f.svg){#fig:emplst1_period_f}
+![Women, full-time employment](../results/figures/emplst1_period_f.svg){#fig:emplst1_period_f}
 
-![Men, full-time employment](figures/emplst1_period_m.svg){#fig:emplst1_period_m.svg}
+![Men, full-time employment](../results/figures/emplst1_period_m.svg){#fig:emplst1_period_m.svg}
 
-![Women, part-time employment](figures/emplst2_period_f.svg){#fig:emplst2_period_f}
+![Women, part-time employment](../results/figures/emplst2_period_f.svg){#fig:emplst2_period_f}
 
-![Men, part-time employment](figures/emplst2_period_m.svg){#fig:emplst2_period_m.svg}
+![Men, part-time employment](../results/figures/emplst2_period_m.svg){#fig:emplst2_period_m.svg}
 
-![Women, marginal employment](figures/emplst3_period_f.svg){#fig:emplst3_period_f}
+![Women, marginal employment](../results/figures/emplst3_period_f.svg){#fig:emplst3_period_f}
 
-![Men, marginal employment](figures/emplst3_period_m.svg){#fig:emplst3_period_m.svg}
+![Men, marginal employment](../results/figures/emplst3_period_m.svg){#fig:emplst3_period_m.svg}
 
 Full-time, part-time and marginal employment (as share of employed sample population) by arrival cohort, gender, and period.
 
@@ -422,13 +422,13 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 ## ISEI
 
 <div id="fig:isei88_res">
-![Women, by duration of stay](figures/isei88_res_timeres_f.svg){#fig:isei88_res_timeres_f}
+![Women, by duration of stay](../results/figures/isei88_res_timeres_f.svg){#fig:isei88_res_timeres_f}
 
-![Men, by duration of stay](figures/isei88_res_timeres_m.svg){#fig:isei88_res_timeres_m}
+![Men, by duration of stay](../results/figures/isei88_res_timeres_m.svg){#fig:isei88_res_timeres_m}
 
-![Women, by period](figures/isei88_res_period_f.svg){#fig:isei88_res_period_f}
+![Women, by period](../results/figures/isei88_res_period_f.svg){#fig:isei88_res_period_f}
 
-![Men, by period](figures/isei88_res_period_m.svg){#fig:isei88_res_period_m}
+![Men, by period](../results/figures/isei88_res_period_m.svg){#fig:isei88_res_period_m}
 
 ISEI-88 scores by arrival cohort, gender, duration of stay and period.
 </div>
@@ -450,13 +450,13 @@ __Additional check for age restriction effects:__
 Regarding skill selectivity in arrival age, our sample restriction to persons between age 25 and 54 means that migrants arriving at age 18-23 'grow into' our sample.  For example, a person who immigrated at age 20 is first part of our analysis sample after 5 years of stay in Germany. If those young migrants who grow into our sample are less skilled and take on lower status employment than older arrivals who are already included, this might explain part of the decline in occupational status over the first years of residence. Comparing the educational levels between these two groups for a duration of stay of 1-6 years, this general pattern is indeed what we find for all cohorts but the first (see [@Tbl:sum_isced_arrage_f; @Tbl:sum_isced_arrage_m]). Consequently, accounting for this kind of selectivity in our occupational status analysis (by extending the age range to 18-54) leads to attenuated declines in ISEI scores in the first years of residence, particularly for women:
 
 <div id="fig:isei88_res_age">
-![Women, age 25-54](figures/isei88_res_timeres_f.svg){#fig:isei88_res_timeres_f}
+![Women, age 25-54](../results/figures/isei88_res_timeres_f.svg){#fig:isei88_res_timeres_f}
 
-![Men, age 25-54](figures/isei88_res_timeres_m.svg){#fig:isei88_res_timeres_m}
+![Men, age 25-54](../results/figures/isei88_res_timeres_m.svg){#fig:isei88_res_timeres_m}
 
-![Women, age 18-54](figures/isei88_res_timeres_f_18_54.svg){#fig:isei88_res_timeres_f_18_54}
+![Women, age 18-54](../results/figures/isei88_res_timeres_f_18_54.svg){#fig:isei88_res_timeres_f_18_54}
 
-![Men, age 18-54](figures/isei88_res_timeres_m_18_54.svg){#fig:isei88_res_timeres_m_18_54}
+![Men, age 18-54](../results/figures/isei88_res_timeres_m_18_54.svg){#fig:isei88_res_timeres_m_18_54}
 
 ISEI-88 scores by arrival cohort, gender, and duration of stay and period. Different age restrictions.
 </div>
@@ -469,9 +469,9 @@ __Additional check for possible employment delays for the less educated:__
 Turning to our second assumed selection issue, employment delays for the lower skilled, we compare the absolute number of employed migrants by cohort and duration of stay between different educational levels. Generally, in the very first years of residence, the number of employed migrants with ISCED levels 5-6 is as high or even higher than the number of those with ISCED levels 0-2 and 3-4. However, this composition quickly changes with longer durations of stay, when more and more migrants with low or medium educational levels take up employment. As a result, the average education of migrants in employment decreases in the first years of stay, matching the observed initial decline in occupational status Despite some smaller differences, this general pattern seems to hold for women and men of all cohorts.
 
 <div id="fig:empl_dummy_timeres_edu_n">
-![Women](figures/empl_dummy_timeres_edu_n_f.svg){#fig:empl_dummy_timeres_edu_n_f}
+![Women](../results/figures/empl_dummy_timeres_edu_n_f.svg){#fig:empl_dummy_timeres_edu_n_f}
 
-![Men](figures/empl_dummy_timeres_edu_n_m.svg){#fig:empl_dummy_timeres_edu_n_m}
+![Men](../results/figures/empl_dummy_timeres_edu_n_m.svg){#fig:empl_dummy_timeres_edu_n_m}
 
 Number of persons in employment (population projection) by arrival cohort, gender, and duration of stay.
 </div>
