@@ -28,7 +28,7 @@ build:
     - cd ../
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
-    - git checkout http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH} HEAD:${CI_COMMIT_REF_NAME}
+    - git checkout master
     - git add docs/appendix.md
     - git add docs/appendix.html
     - git add public/index.html
