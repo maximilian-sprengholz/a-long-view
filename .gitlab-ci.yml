@@ -38,7 +38,7 @@ pages:
   artifacts:
     paths:
       - public
-    expire-in:
+    expire_in:
       - 1 week
   only:
     - master
