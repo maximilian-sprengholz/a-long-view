@@ -31,7 +31,9 @@ gen_docs:
     - git push origin :refs/tags/${CI_COMMIT_TAG}
     - git tag -d ${CI_COMMIT_TAG}
     - git tag -a ${CI_COMMIT_TAG} -m "Bump to ${CI_COMMIT_TAG} [ci skip]"
-    - git push origin ${CI_COMMIT_TAG}
+    - git tag
+    - git show ${CI_COMMIT_TAG}
+    - git push origin HEAD:${CI_COMMIT_TAG} --tags
   only:
     - tags
 
