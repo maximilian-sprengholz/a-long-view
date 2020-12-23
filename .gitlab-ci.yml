@@ -39,7 +39,7 @@ pages:
   stage: deploy
   script:
     - git pull --rebase http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
-    - checkout master
+    - git checkout master
     - git pull --rebase http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
     - rm -rf public
     - mkdir public
