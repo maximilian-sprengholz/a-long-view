@@ -3,7 +3,7 @@ import sys
 import re
 
 replace_string = ''
-for i in xrange(3,len(sys.argv)):
+for i in range(3,len(sys.argv)):
     replace_string += sys.argv[i]
 
 with open(sys.argv[1],'r') as file:
