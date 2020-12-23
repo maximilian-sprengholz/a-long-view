@@ -22,18 +22,19 @@ gen_docs:
     - python dep/regexrep.py 'appendix.md' '(date:[\s])(.*)' '\1"' ${DATE} '"'
     - pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css appendix.md -H dep/lightbox.js -s -o appendix.html
     - cd ../
-    - git config --global user.name "${GITLAB_USER_NAME}"
-    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - git config --global user.name "Docbuilder"
+    - git config --global user.email "built@your.docs"
     - git add docs/appendix.md
     - git add docs/appendix.html
-    - git commit -m "Document build ${CI_COMMIT_TAG} [ci skip]" || echo "Nothing to commit."
-    - git remote rm origin && git remote add origin http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
+    - git commit -m "Document build ${CI_COMMIT_TAG}" || echo "Nothing to commit."
+    - git remote rm origin && git remote add origin http://project_4571_bot:${DOCBUILDER_TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
     - git push origin :refs/tags/${CI_COMMIT_TAG}
     - git tag -d ${CI_COMMIT_TAG}
-    - git tag -a ${CI_COMMIT_TAG} -m "Bump to ${CI_COMMIT_TAG} [ci skip]"
-    - git tag
-    - git show ${CI_COMMIT_TAG}
-    - git push origin tag ${CI_COMMIT_TAG} HEAD:master -o ci.skip
+    - git tag -a ${CI_COMMIT_TAG} -m "Bump to ${CI_COMMIT_TAG}"
+    - git push origin tag ${CI_COMMIT_TAG} HEAD:master
+  except:
+    variables:
+      - $GITLAB_USER_LOGIN == "project_4571_bot"
   only:
     - tags
 
@@ -54,5 +55,8 @@ pages:
     paths:
       - public
     expire_in: 15 mins
+  except:
+    variables:
+      - $GITLAB_USER_LOGIN == "project_4571_bot"    
   only:
     - tags
