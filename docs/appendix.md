@@ -31,7 +31,7 @@ subfigureRefIndexTemplate: $$i$$$$suf$$$$s$$
 
 This paper draws on data from the Microcensus Scientific Use Files (DOI: [10.21242/12211.1976.00.00.3.1.0](https://doi.org/10.21242/12211.1976.00.00.3.1.0) to [10.21242/12211.2015.00.00.3.1.0](https://doi.org/10.21242/12211.2015.00.00.3.1.0)) to provide a long-term overview of the labor market performance of different arrival cohorts of female and male migrants to Germany. Whereas there is a large body of research on the labor market outcomes of migrants to Germany, a more descriptive long-term and gender-specific overview is missing. We provide descriptive analyses for the employment rates, working hours, and occupational status levels of different arrival cohorts by gender, calendar year, and duration of stay. The data cover the time period 1976-2015.
 
-To model labor market outcomes over time for first generation immigrants in Germany, we distinguish between __arrival year cohorts__. These correspond to the following arrival periods:
+To model labor market outcomes over time for first generation immigrants in Germany, we distinguish between __arrival year cohorts__. These correspond to the following periods of arrival:
 
 | 1964-1973 | 1974-1983 | 1984-1993 | 1994-2003 | 2004-2010 |
 | --------- | --------- | --------- | --------- | --------- |
