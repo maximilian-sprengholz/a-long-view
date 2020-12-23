@@ -14,6 +14,10 @@ image: kenose/pandoc-python:latest
 before_script:
   - export DATE=$(date '+%Y-%m-%d')
 
+stages:
+  - build
+  - deploy
+
 gen_docs:
   stage: build
   script:
@@ -41,9 +45,6 @@ gen_docs:
 pages:
   stage: deploy
   script:
-    - git pull --rebase http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
-    - git checkout HEAD
-    - git pull --rebase http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
     - rm -rf public
     - mkdir public
     - cp -R -f results/figures/ public # copy figures
@@ -55,8 +56,6 @@ pages:
     paths:
       - public
     expire_in: 15 mins
-  except:
+  only:
     variables:
       - $GITLAB_USER_LOGIN == "project_4571_bot"
-  only:
-    - tags
