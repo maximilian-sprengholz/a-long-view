@@ -12,7 +12,7 @@
 image: kenose/pandoc-python:latest
 
 before_script:
-  - export DATE=$(date '+%y-%m-%d')
+  - export DATE=$(date '+%Y-%m-%d')
 
 gen_docs:
   stage: build
@@ -35,13 +35,14 @@ pages:
   stage: deploy
   script:
     - git pull http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
+    - git checkout
     - rm -rf public
     - mkdir public
-    - cp -R -f results/figures/ public/ # copy figures
+    - cp -R -f results/figures/ public # copy figures
     - cd docs
     - cp appendix.html index.html
     - python3 dep/regexrep.py 'index.html' '../results/figures' 'figures' # fix links for pages (though usually no problem with base64 encoded .svg)
-    - mv index.html ../public/ # copy index to update
+    - mv index.html ../public # copy index to update
   artifacts:
     paths:
       - public
