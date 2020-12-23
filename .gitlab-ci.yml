@@ -30,7 +30,7 @@ gen_docs:
     - git remote show origin
     - git remote rm origin && git remote add origin http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
     - git push origin :refs/tags/${CI_COMMIT_TAG}
-    - git push origin HEAD:${CI_COMMIT_REF_NAME} --tags
+    - git push origin whatever:refs/heads/${CI_COMMIT_REF_NAME} --tags
   only:
     - tags
 
