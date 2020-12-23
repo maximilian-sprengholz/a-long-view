@@ -1,7 +1,0 @@
-
-#python dep/regexrep.py 'appendix.md' '(subtitle:[\s])(.*)' '\1"Version <b>${CI_COMMIT_TAG}</b>"'
-export DATE=$(date '+%y-%m-%d')
-python dep/regexrep.py 'appendix.md' '(date:[\s])(.*)' '\1"' ${DATE} '"'
-
-# pandoc call
-#pandoc --filter pandoc-include --filter pandoc-crossref --citeproc --bibliography=appendix.bib --csl=journal-of-family-research.csl --number-sections --table-of-contents -c ../public/css/vue_extended.css appendix.md -s -o test.html

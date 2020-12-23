@@ -1,11 +1,9 @@
 # Open materials: 'From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
 
-_Version 1.2.0_
-
 Open materials for the paper 'From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany' by
 [Maximilian Sprengholz](mailto:maximilian.sprengholz@hu-berlin.de), [Claudia Diehl](mailto:claudia.diehl@uni-konstanz.de), [Johannes Giesecke](johannes.giesecke@hu-berlin.de) and [Michaela Kreyenfeld](Kreyenfeld@hertie-school.org).
 
-See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).
+__See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).__
 
 ## Project organization
 
@@ -20,7 +18,8 @@ See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).
 │   ├── processed      <- The final data set
 │   ├── raw            <- The original, immutable data dump
 │   └── temp           <- Intermediate data that has been transformed
-├── docs               <- Documentation (.md, building dependencies)
+├── docs               <- Documentation (.md -> .html, Makefile and Dockerfile)
+│   └── dep            <- Dependencies for the .html generation
 ├── public             <- Published appendix (as page for repo)
 ├── results
 │   ├── figures        <- Figures for the manuscript / appendix
@@ -28,7 +27,7 @@ See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).
 └── src                <- Source code (.do)
 
 ```
-Repository organization implemented with [cookiecutter](https://github.com/cookiecutter/cookiecutter) using the [good-enough-project template](good-enough-project).
+Repository organization implemented with [cookiecutter](https://github.com/cookiecutter/cookiecutter) using an adapted version of the [good-enough-project template](good-enough-project).
 
 ## Data
 The main data used in this project are the Scientific Use Files (SUFs) 1976-2015 of the German Microsensus
@@ -45,18 +44,37 @@ The following user-written programs need to be installed in order to run the ful
 - [grstyle](http://repec.sowi.unibe.ch/stata/grstyle/index.html). Jann, B. (2018) ‘Customizing Stata Graphs Made Easy (Part 1)’, The Stata Journal: Promoting communications on statistics and Stata, 18, 491–502.
 - [tabout v3](http://tabout.net.au/). Watson, I. (2019).
 
-Further external code used:
+Further external code used (part of the do-files, no installation necessary):
 
 - [isei_mz_96-04.do](https://www.gesis.org/missy/files/documents/MZ/isei/isei_mz_96-04.do). Kogan, I. and Schimpl-Neimanns, B. (2006) Recodierung von ISEI auf Basis von ISCO-88 (COM). German Microdata Lab (GML), Mannheim
 - [Programme zur Umsetzung der Bildungsklassifikation ISCED-1997](https://www.gesis.org/missy/materials/MZ/tools/isced), German Microdata Lab (GML), Mannheim. Used for years 1976-2013, source files under `bin/external`.
 
-The online [appendix/documentation](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/) was created in [Atom](https://github.com/atom/atom) with [Markdown Preview Enhanced](https://github.com/shd101wyy/markdown-preview-enhanced), [Pandoc](https://github.com/jgm/pandoc) and [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref).
+## Documentation
 
+The [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/) presents the results of our main as well as supplementary estimations. The file `docs/appendix.html` represents a copy of this page. In case you want to re-generate `docs/appendix.html` from `docs/appendix.md`, please use the provided `Makefile`. To run it, you need to have [Docker](https://www.docker.com/) installed (and Windows users also [Make](https://www.gnu.org/software/make/)):
+
+```sh
+cd path/to/a-long-view/docs
+make all
+```
+
+The Docker image that is pulled in the process already contains all the necessary depencies. Alternatively, you can also do it manually given [Pandoc](https://github.com/jgm/pandoc), [pandoc-crossref](https://github.com/lierdakil/pandoc-crossref), and [pandoc-include](https://pypi.org/project/pandoc-include/) (which requires Python) are installed:
+
+```sh
+cd path/to/a-long-view/docs
+
+# Call Pandoc
+pandoc --filter pandoc-include --filter pandoc-crossref --citeproc \
+    --bibliography=dep/appendix.bib --csl=dep/journal-of-family-research.csl \
+    --number-sections --table-of-contents -c dep/empty.css -H dep/vue_extended_h.css \
+    appendix.md -H dep/lightbox.js -s -o appendix.html
+```
+
+Note that the version is not updated in either of these ways, as it is determined by git via a pipeline job and not available locally. The date is set to the current date when using the `Makefile`.
 
 ## License
 
 This project is licensed under the terms of the [MIT License](/LICENSE.md)
-
 
 ## Citation
 

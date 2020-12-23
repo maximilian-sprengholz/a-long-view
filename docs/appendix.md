@@ -148,9 +148,7 @@ Source: Microcensus Scientific Use Files, DOI: <a href="https://doi.org/10.21242
 </p>
 </div>
 
-Since 2005, the immigration year question is part of the mandatory questionnaire. The lower non-response rates mean overall higher observation numbers. [@Tbl:sum_cohort_sel_nonres_2004-2006] shows that the relative size of cohorts in percent increased to a similar extent at this cut-off. So, probably no selection on the cohort (selection on other characteristics still possible, of course). The changes for cohorts 1964-73 and 1994-2003 are due the age range of 25-54, shares are even closer across years without this restriction. @
-
-test @import
+Since 2005, the immigration year question is part of the mandatory questionnaire. The lower non-response rates mean overall higher observation numbers. [@Tbl:sum_cohort_sel_nonres_2004-2006] shows that the relative size of cohorts in percent increased to a similar extent at this cut-off. So, probably no selection on the cohort (selection on other characteristics still possible, of course). The changes for cohorts 1964-73 and 1994-2003 are due the age range of 25-54, shares are even closer across years without this restriction.
 
 !include ../results/output/sum_cohort_sel_nonres_2004-2006.md
 
