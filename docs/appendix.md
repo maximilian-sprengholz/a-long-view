@@ -2,7 +2,7 @@
 title:
   'Online Appendix: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
 subtitle: "Version <b></b>"
-date: "20-12-23"
+date: "2020-12-23"
 titleDelim: .
 figureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
 subfigureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
