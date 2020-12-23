@@ -1,8 +1,8 @@
 ---
 title:
   'Online Appendix: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany'
-subtitle: "Version <b>${CI_COMMIT_TAG}</b>"
-date: "${DATE}"
+subtitle: "Version <b>1.2.0</b> XXX"
+date: "2020-12-21"
 titleDelim: .
 figureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
 subfigureTemplate: __$$figureTitle$$ $$i$$$$titleDelim$$__ $$t$$
