@@ -19,7 +19,7 @@ gen_docs:
   script:
     - git config --global user.name "${GITLAB_USER_NAME}"
     - git config --global user.email "${GITLAB_USER_EMAIL}"
-    - git checkout -b temp-branch
+    - git checkout -b temp
     - cd docs
     - python3 dep/regexrep.py 'appendix.md' '(subtitle:[\s])(.*)' '\1"Version <b>' ${CI_COMMIT_TAG} '</b>"'
     - python dep/regexrep.py 'appendix.md' '(date:[\s])(.*)' '\1"' ${DATE} '"'
@@ -29,13 +29,13 @@ gen_docs:
     - git add docs/appendix.html
     - git commit -m "Document build ${CI_COMMIT_TAG} [ci skip]" || echo "Nothing to commit."
     - git remote rm origin && git remote add origin http://${GITLAB_USER_LOGIN}:${TOKEN}@scm.cms.hu-berlin.de/${CI_PROJECT_PATH}
-    - git push -u origin temp-branch
+    - git push -u origin temp
     - git tag -d ${CI_COMMIT_TAG}
     - git tag -a ${CI_COMMIT_TAG} -m "Bump to ${CI_COMMIT_TAG} [ci skip]"
     - git push origin :refs/tags/${CI_COMMIT_TAG}
     - git push origin master:refs/tags/${CI_COMMIT_TAG}
     - git checkout v1.2.0
-    - git branch -D temp-branch
+    - git branch -D temp
   only:
     - tags
 
