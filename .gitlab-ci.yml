@@ -33,7 +33,7 @@ gen_docs:
     - git tag -a ${CI_COMMIT_TAG} -m "Bump to ${CI_COMMIT_TAG} [ci skip]"
     - git tag
     - git show ${CI_COMMIT_TAG}
-    - git push origin HEAD:${CI_COMMIT_TAG} --tags
+    - git push origin HEAD:master --tags
   only:
     - tags
 
