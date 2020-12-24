@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="dcterms.date" content="2020-12-23" />
+  <meta name="dcterms.date" content="2020-12-24" />
   <title>Online Appendix: From “guestworkers” to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany</title>
   <style>
     code{white-space: pre-wrap;}
@@ -2255,17 +2255,60 @@
   // Author: Maximilian Sprengholz
 
   var Img_Grid_Lightbox = new function() {
-      // check if organized in grids or not
-      let allGrids = document.querySelectorAll('.figure,.subfigures');
-      if (allGrids.length == 0) {
-          // console.log(allGrids.length);
-          allGrids = document.getElementsByTagName('body');
-      }
+
+      let allGrids = [];
       let lightbox = false;
       let imgIndex = [
           src = [],
           cap = []
       ];
+      // init call to count
+      this.init = function() {
+          // check if organized in grids or not
+          let allGrids = document.querySelectorAll('.figure,.subfigures');
+          if (allGrids.length == 0) {
+              // console.log(allGrids.length);
+              allGrids = document.getElementsByTagName('body');
+          }
+          // init for all image grids in document
+          for (let i=0; i<allGrids.length; i++) {
+              // console.log('Graph grid: ' + i)
+              // placeholder arrays per grid (sources and caps)
+              let imgSrc = [];
+              let imgCap = [];
+              // index all images within grid
+              const allImg = allGrids[i].querySelectorAll('img');
+              // for all images within a single grid
+              for (let j=0; j<allImg.length; j++) {
+                  // console.log('Image within grid: ' + j);
+                  // get and push source and figcaption in array
+                  imgSrc.push(allImg[j].getAttribute('src'));
+                  let cap = allGrids[i].querySelectorAll('img[id="' + allImg[j].getAttribute('id') + '"]' + ' + figcaption')[0];
+                  if (cap) {
+                      imgCap.push(cap.innerHTML);
+                  } else {
+                      imgCap.push('');
+                  }
+                  // set attributes that will be fed to lightbox to get sources
+                  allImg[j].setAttribute("gridId", i );
+                  allImg[j].setAttribute("imgId", j );
+                  // add click event listener to open lightbox
+                  allImg[j].addEventListener("click", function(){ Img_Grid_Lightbox.startLightbox(allImg[j]); });
+              };
+              // push grid specific arrays in main index
+              imgIndex[0].push(imgSrc);
+              imgIndex[1].push(imgCap);
+          };
+          // append lightbox container once (after pushing all images in Index)
+          let lightboxContainer = '<div id="lightbox-container">\n'
+          lightboxContainer += '<a href="#/" id="lightbox-prev">&#9664;</a>\n'
+          lightboxContainer += '<a href="#/" id="lightbox-next">&#9654;</a>\n'
+          lightboxContainer += '<a href="#/" id="lightbox-close">&times;</a>\n'
+          lightboxContainer += '<div id="lightbox-img-scaler"></div>\n'
+          lightboxContainer += '<p id="lightbox-legend"></p>\n'
+          lightboxContainer += '</div>\n'
+          document.body.insertAdjacentHTML('afterbegin', lightboxContainer)
+      };
       // lightbox functionality
       this.startLightbox = function(element) {
           // start lightbox and set image source
@@ -2308,47 +2351,6 @@
           };
           document.body.addEventListener("keyup", keyDown);
       };
-      // initialize
-      this.init = function() {
-          // for all image grids in document
-          for (let i=0; i<allGrids.length; i++) {
-              // console.log('Graph grid: ' + i)
-              // placeholder arrays per grid (sources and caps)
-              let imgSrc = [];
-              let imgCap = [];
-              // index all images within grid
-              const allImg = allGrids[i].querySelectorAll('img');
-              // for all images within a single grid
-              for (let j=0; j<allImg.length; j++) {
-                  // console.log('Image within grid: ' + j);
-                  // get and push source and figcaption in array
-                  imgSrc.push(allImg[j].getAttribute('src'));
-                  let cap = allGrids[i].querySelectorAll('img[id="' + allImg[j].getAttribute('id') + '"]' + ' + figcaption')[0];
-                  if (cap) {
-                      imgCap.push(cap.innerHTML);
-                  } else {
-                      imgCap.push('');
-                  }
-                  // set attributes that will be fed to lightbox to get sources
-                  allImg[j].setAttribute("gridId", i );
-                  allImg[j].setAttribute("imgId", j );
-                  // add click event listener to open lightbox
-                  allImg[j].addEventListener("click", function(){ Img_Grid_Lightbox.startLightbox(allImg[j]); });
-              };
-              // push grid specific arrays in main index
-              imgIndex[0].push(imgSrc);
-              imgIndex[1].push(imgCap);
-          };
-          // append lightbox container once (after pushing all images in Index)
-          let lightboxContainer = '<div id="lightbox-container">\n'
-          lightboxContainer += '<a href="#/" id="lightbox-prev">&#9664;</a>\n'
-          lightboxContainer += '<a href="#/" id="lightbox-next">&#9654;</a>\n'
-          lightboxContainer += '<a href="#/" id="lightbox-close">&times;</a>\n'
-          lightboxContainer += '<div id="lightbox-img-scaler"></div>\n'
-          lightboxContainer += '<p id="lightbox-legend"></p>\n'
-          lightboxContainer += '</div>\n'
-          document.body.insertAdjacentHTML('afterbegin', lightboxContainer)
-      };
   };
 
   // Init on load
@@ -2362,7 +2364,7 @@
 <header id="title-block-header">
 <h1 class="title">Online Appendix: From “guestworkers” to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany</h1>
 <p class="subtitle">Version <b>v1.2.0</b></p>
-<p class="date">2020-12-23</p>
+<p class="date">2020-12-24</p>
 </header>
 <nav id="TOC" role="doc-toc">
 <ul>
