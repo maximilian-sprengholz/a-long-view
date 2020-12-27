@@ -1,7 +1,0 @@
-git tag -d v1.2.0
-git push origin :refs/tags/v1.2.0
-git add .
-git commit -m "Bump to v1.2.0"
-git push
-git tag -a v1.2.0 -m "Bump to version 1.2.0"
-git push origin v1.2.0
