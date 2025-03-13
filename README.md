@@ -3,7 +3,7 @@
 Open materials for the paper 'From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany' by
 [Maximilian Sprengholz](mailto:maximilian.sprengholz@hu-berlin.de), [Claudia Diehl](mailto:claudia.diehl@uni-konstanz.de), [Johannes Giesecke](johannes.giesecke@hu-berlin.de) and [Michaela Kreyenfeld](Kreyenfeld@hertie-school.org).
 
-__See [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/).__
+__See [online appendix](https://maximilian-sprengholz.github.io/a-long-view/).__
 
 ## Project organization
 
@@ -51,7 +51,7 @@ Further external code used (part of the do-files, no installation necessary):
 
 ## Documentation
 
-The [online appendix](http://pages.cms.hu-berlin.de/sprenmax/a-long-view/) presents the results of our main as well as supplementary estimations. The file `docs/appendix.html` represents a copy of this page. In case you want to re-generate `docs/appendix.html` from `docs/appendix.md`, please use the provided `Makefile`. To run it, you need to have [Docker](https://www.docker.com/) installed (and Windows users also [Make](https://www.gnu.org/software/make/)):
+The [online appendix](https://maximilian-sprengholz.github.io/a-long-view/) presents the results of our main as well as supplementary estimations. The file `docs/appendix.html` represents a copy of this page. In case you want to re-generate `docs/appendix.html` from `docs/appendix.md`, please use the provided `Makefile`. To run it, you need to have [Docker](https://www.docker.com/) installed (and Windows users also [Make](https://www.gnu.org/software/make/)):
 
 ```sh
 cd path/to/a-long-view/docs
@@ -70,7 +70,7 @@ pandoc --filter pandoc-include --filter pandoc-crossref --citeproc \
     appendix.md -H dep/lightbox.js -s -o appendix.html
 ```
 
-Note that the version is not updated in either of these ways, as it is determined by git via a pipeline job and not available locally. The date is set to the current date when using the `Makefile`.
+Note that the version is not updated in either of these ways, as it was set by a `git tag` via a pipeline job that is not available locally. The date is set to the current date when using the `Makefile`.
 
 ## License
 
@@ -80,4 +80,4 @@ This project is licensed under the terms of the [MIT License](/LICENSE.md)
 
 Please cite this software as:
 
-Sprengholz, M., Diehl, C., Giesecke, J., Kreyenfeld, M. (2020) 'Open materials: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany', [https://scm.cms.hu-berlin.de/sprenmax/a-long-view](https://scm.cms.hu-berlin.de/sprenmax/a-long-view).
+Sprengholz, M., Diehl, C., Giesecke, J., Kreyenfeld, M. (2020) 'Open materials: From "guestworkers" to EU migrants: A gendered view on the labor market integration of different arrival cohorts in Germany', [https://github.com/maximilian-sprengholz/a-long-view](https://github.com/maximilian-sprengholz/a-long-view).
