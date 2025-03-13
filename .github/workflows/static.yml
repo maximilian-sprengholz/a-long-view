@@ -28,16 +28,17 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    steps:
+    steps:  
       - name: Checkout
         uses: actions/checkout@v4
-      - run: mkdir public
-      - run: cp -R -f results/figures/ public # copy figures
-      - run: cd docs
-      - run: ls -a
-      - run: cp appendix.html index.html
-      - run: python3 dep/regexrep.py 'index.html' '../results/figures' 'figures' # fix links for pages (though usually no problem with base64 encoded .svg)
-      - run: mv index.html ../public # copy index to update
+      - name: Setup Files and Links
+        run: |
+          mkdir public
+          cp -R -f results/figures/ public & # copy figures
+          cd docs
+          cp appendix.html index.html
+          python3 dep/regexrep.py 'index.html' '../results/figures' 'figures' # fix links for pages (though usually no problem with base64 encoded .svg)
+          mv index.html ../public # copy index to update
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
